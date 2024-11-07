@@ -1,0 +1,31 @@
+name: CI -> Deploy to My website
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy-front:
+    runs-on: ubuntu-latest
+    environment:
+      name: spinkicks
+    steps:
+      - uses: actions/checkout@v2
+      # Criação do build
+      - name: Setup node 
+        uses: actions/setup-node@v3
+        with:
+          node-version: v20.10.0
+      - run: npm install
+      - run: npm run build
+      - run: cp .htaccess ./dist
+
+      # Deploy do front
+
+      - name: Upload from public_html via FTP
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_dir: ${{ secrets.FTP_LOCAL_DIR}}
+          remote_dir: ${{ secrets.FTP_REMOTE_DIR}}
+          delete: "false"
