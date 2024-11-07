@@ -1,0 +1,37 @@
+.cursor {
+  left: -100%;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  transition: 0.2s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.cursor.active,
+.cursor.active_view {
+  width: 70px;
+  height: 70px;
+  mix-blend-mode: difference;
+}
+
+.cursor.active {
+  background: rgba(255, 255, 255, 1);
+}
+
+.cursor.active_view {
+  mix-blend-mode: inherit;
+  background-color: lawngreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.cursor.active_view::before {
+  content: "veja";
+  font-size: 2rem;
+}

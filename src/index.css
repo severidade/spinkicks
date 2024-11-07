@@ -46,8 +46,8 @@ html {
 p { font-size: 1.6rem;}
 
 body {
-  background: url("./assets/black_texture.png") repeat;
   color: var(--color-dark);
+  overflow: hidden;
 }
 
 body::-webkit-scrollbar {

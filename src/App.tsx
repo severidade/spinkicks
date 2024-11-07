@@ -1,11 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
+import VideoBg from './components/VideoBg/VideoBg.tsx';
+import CustomCursor from './components/CustomCursor/CoustomCursor.tsx';
 import './CSS/reset.css';
 import './App.css';
-import VideoBg from './components/VideoBg/VideoBg.tsx';
 
 function App() {
   return (
     <div className="stage">
+      <CustomCursor />
       <VideoBg />
       <h1 className="app_title ">
         Olá mundo
