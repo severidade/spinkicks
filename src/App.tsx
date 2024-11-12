@@ -3,6 +3,7 @@ import VideoBg from './components/VideoBg/VideoBg.tsx';
 import CustomCursor from './components/CustomCursor/CoustomCursor.tsx';
 import './CSS/reset.css';
 import './App.css';
+import Footer from './components/Footer/index.tsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <li className="link_img">02</li>
         <li className="link_img">03</li>
       </ul>
+      <Footer />
     </div>
   );
 }

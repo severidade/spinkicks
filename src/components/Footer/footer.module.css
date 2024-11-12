@@ -1,0 +1,73 @@
+footer {
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding: 0 5vw;
+}
+
+.titulo  {
+  text-transform: uppercase;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.menu_social {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem 0;
+  list-style-type: none;
+}
+
+.social_linkedin, .social_github, .social_behance {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  text-indent: -1000%;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.social_linkedin {
+  background-image: url("./icons/linkedin.png");
+}
+
+.social_github {
+  background-image: url("./icons/github.png");
+}
+
+.social_behance {
+  background-image: url("./icons/behance.png");
+  background-size: 100%;
+}
+
+.external_link {
+  /* color: var(--color-highlight); */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 500px) {
+	.modal::before{
+		content: "";
+    width: 200%;
+    height: 200%;
+    transform: translate(-48%, -30%) rotate(90deg);
+    z-index: -2;
+	}
+}
+
+@media screen and (max-height: 580px) {
+  footer {
+    display: none;
+  }
+}
