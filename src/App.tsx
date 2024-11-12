@@ -9,10 +9,14 @@ function App() {
     <div className="stage">
       <CustomCursor />
       <VideoBg />
-      <h1 className="app_title ">
-        Olá mundo
+      <h1 className="app_title">
+        SpinKicks
       </h1>
-      <p className="container_img">configurações iniciais do meu</p>
+      <ul className="container_gallery">
+        <li className="link_img">01</li>
+        <li className="link_img">02</li>
+        <li className="link_img">03</li>
+      </ul>
     </div>
   );
 }

@@ -7,4 +7,23 @@
   max-width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  gap: 5rem;
+}
+
+.container_gallery {
+  display: flex;
+  gap: 10rem;
+  justify-content: space-between;
+}
+
+.container_gallery > li {
+  width: 200px;
+  height: 200px;
+  font-family: "Anton", serif;
+  background-color: var(--color-title-primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
 }

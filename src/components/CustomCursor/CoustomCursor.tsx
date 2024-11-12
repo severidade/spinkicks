@@ -6,8 +6,8 @@ function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const cursorToggleElements = document.querySelectorAll('.link_menu');
-    const cursorViewElements = document.querySelectorAll('.container_img');
+    const cursorToggleElements = document.querySelectorAll('.link');
+    const cursorViewElements = document.querySelectorAll('.link_img');
 
     const handleMouseMove = (e: MouseEvent) => {
       if (cursorRef.current) {
