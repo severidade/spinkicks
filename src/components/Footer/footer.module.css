@@ -37,15 +37,15 @@ footer p {
 }
 
 .social_linkedin {
-  background-image: url("./icons/linkedin.png");
+  background-image: url("./icons/linkedin_pb.png");
 }
 
 .social_github {
-  background-image: url("./icons/github.png");
+  background-image: url("./icons/github_pb.png");
 }
 
 .social_behance {
-  background-image: url("./icons/behance.png");
+  background-image: url("./icons/behance_pb.png");
   background-size: 100%;
 }
 
