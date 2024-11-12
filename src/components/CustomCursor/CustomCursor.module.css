@@ -1,3 +1,12 @@
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 .cursor {
   position: absolute;
   left: 100%;
@@ -25,19 +34,20 @@
   z-index: 999;
 }
 
-.cursor.active,
+.cursor.active {
+  width: 0rem;
+  height: 0rem;
+}
+
+.cursor.active::after {
+  border: dotted var(--color-dark) 2px;
+  animation: rotate 1s linear infinite;
+}
+
+
 .cursor.active_view {
   width: 70px;
   height: 70px;
-  mix-blend-mode: difference;
-}
-
-.cursor.active { 
-  background: rgba(255, 255, 255, 1);
-}
-
-.cursor.active_view {
-  mix-blend-mode: inherit;
   background-color: #9CEE69;
   display: flex;
   justify-content: center;
