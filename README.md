@@ -19,3 +19,8 @@ Do ponto de vista da *acessibilidade*, considerando que alguns usuários configu
 
 Dito isso, é importante sempre ponderar: o cursor customizado agrega valor real à identidade do projeto? A perda dessa feature em mobile compromete a experiência? Existe uma forma de compensar essa perda em diferentes dispositivos?
 
+## Sumário de Versões do Projeto
+
+Este repositório contém diferentes versões do projeto, cada uma implementando funcionalidades específicas. Abaixo estão os links para cada versão:
+
+- [Versão Custom Cursor v1](https://github.com/severidade/spinkicks/tree/feature/custom-cursor-v1): Implementa o cursor customizado.
