@@ -6,8 +6,16 @@ import './App.css';
 import Footer from './components/Footer/index.tsx';
 
 function App() {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    alert('Você está usando um dispositivo móvel!');
+  } else {
+    alert('É um desktop');
+  }
   return (
     <div className="stage">
+      {!isMobile && <CustomCursor />}
       <CustomCursor />
       <VideoBg />
       <h1 className="app_title">
