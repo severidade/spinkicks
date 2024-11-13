@@ -6,9 +6,11 @@ import './App.css';
 import Footer from './components/Footer/index.tsx';
 
 function App() {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   return (
     <div className="stage">
-      <CustomCursor />
+      {!isMobile && <CustomCursor />}
       <VideoBg />
       <h1 className="app_title">
         SpinKicks
