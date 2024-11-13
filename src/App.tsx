@@ -1,27 +1,17 @@
-/* eslint-disable react/react-in-jsx-scope */
-import VideoBg from './components/VideoBg/VideoBg.tsx';
-import CustomCursor from './components/CustomCursor/CoustomCursor.tsx';
 import './CSS/reset.css';
 import './App.css';
-import Footer from './components/Footer/index.tsx';
+import { Route, Routes } from 'react-router-dom';
+import Demo01 from './pages/Demo01/index.tsx';
+import Demo02 from './pages/Demo02/index.tsx';
+import Error from './pages/Error/index.tsx';
 
 function App() {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
   return (
-    <div className="stage">
-      {!isMobile && <CustomCursor />}
-      <VideoBg />
-      <h1 className="app_title">
-        SpinKicks
-      </h1>
-      <ul className="container_gallery">
-        <li className="link_img">01</li>
-        <li className="link_img">02</li>
-        <li className="link_img">03</li>
-      </ul>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Demo01 />} />
+      <Route path='/demo02' element={<Demo02 />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
 }
 
