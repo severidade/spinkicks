@@ -1,3 +1,4 @@
+![Prévia da página - Preview of the page](./tela_01.png)
 # Cursor Customizado em React: Design e Funcionalidade para um Site Mais Interativo
 
 **Personalizar o cursor de um site** é uma maneira simples e poderosa de enriquecer a experiência do usuário. Muitas vezes, o cursor padrão passa despercebido, mas ao **criar um cursor customizado**, é possível tornar a **navegação mais envolvente, divertida e até informativa**. Este estudo explora o desenvolvimento de um componente de cursor em React, com o objetivo de atender a essas necessidades e melhorar a interação do usuário com a interface.
