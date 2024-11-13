@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="stage">
       {!isMobile && <CustomCursor />}
-      <CustomCursor />
       <VideoBg />
       <h1 className="app_title">
         SpinKicks
