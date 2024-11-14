@@ -73,6 +73,21 @@
 }
 
 .container_videoBg::before {
+  animation: grain 3s steps(10) infinite;
+  content: "";
+  width: 300%;
+  height: 300%;
+  background-image: var(--grain-image, url(./img/noise.png)); /* valor padrão como fallback */
+  background-repeat: repeat;
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  opacity: 0.1;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* .container_videoBg::before {
     animation: grain 3s steps(10) infinite;
     content: "";
     width: 300%;
@@ -85,4 +100,4 @@
     opacity: 0.1;
     transition: opacity 0.4s ease;
     z-index: 1;
-  } 
+  }  */
