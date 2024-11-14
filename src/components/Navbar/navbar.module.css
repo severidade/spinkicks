@@ -1,0 +1,30 @@
+.container_nav_link {
+  width: 50%;
+  display: flex;
+  gap: 5rem;
+}
+
+.nav_link {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  width: 100px;
+  border-radius: 24px;
+  background: #ffffff85;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para o estado active */
+.active {
+  color: var(--color-hard-gray);
+  background-color: var(--color-title-primary);
+}
+
+
+.nav_link:hover {
+  background-color: var(--color-hard-gray);
+  color: var(--color-text-primary);
+}
