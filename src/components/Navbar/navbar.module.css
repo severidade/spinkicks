@@ -23,3 +23,8 @@
   background-color: var(--color-title-primary);
 }
 
+
+.nav_link:hover {
+  background-color: var(--color-hard-gray);
+  color: var(--color-text-primary);
+}
