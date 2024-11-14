@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import CustomCursor from "../../components/CustomCursor/CoustomCursor";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
@@ -7,21 +8,49 @@ import grainTexture from '../../assets/texture/dots_01.png';
 
 export default function Demo01() {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
-  return(
-   <div className="stage">
-      <Navbar />
-      {!isMobile && <CustomCursor />}
-      <VideoBg videoSrc={video}  grainSrc={grainTexture}/>
-      <h1 className="app_title">
-        SpinKicks
-      </h1>
-      <ul className="container_gallery">
-        <li className="link_img">01</li>
-        <li className="link_img">02</li>
-        <li className="link_img">03</li>
-      </ul>
-      <Footer />
+  useEffect(() => {
+    setIsPageLoaded(false);
+
+    const videoPromise = new Promise<void>((resolve) => {
+      const videoElement = new HTMLVideoElement();
+      videoElement.src = video;
+      videoElement.onloadeddata = () => resolve();
+    });
+
+    videoPromise.then(() => {
+      setIsPageLoaded(true);
+    }).catch((error) => {
+      console.error('Erro ao carregar o vídeo:', error);
+      setIsPageLoaded(true);
+    });
+
+    return () => {
+      setIsPageLoaded(false);
+    };
+  }, []);
+
+  return (
+    <div className="stage">
+      {isPageLoaded ? (
+        <>
+          <Navbar />
+          {!isMobile && <CustomCursor />}
+          <VideoBg videoSrc={video} grainSrc={grainTexture} />
+          <h1 className="app_title">
+            SpinKicks
+          </h1>
+          <ul className="container_gallery">
+            <li className="link_img">01</li>
+            <li className="link_img">02</li>
+            <li className="link_img">03</li>
+          </ul>
+          <Footer />
+        </>
+      ) : (
+        <div className="loading">Carregando...</div>
+      )}
     </div>
-  )
+  );
 }
