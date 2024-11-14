@@ -1,15 +1,16 @@
-/* eslint-disable react/react-in-jsx-scope */
-import videoBg from '../../assets/video/25.mp4';
 import styles from './VideoBg.module.css';
+interface VideoBgProps {
+  videoSrc: string;
+}
 
-function VideoBg() {
+const VideoBg = ({ videoSrc }: VideoBgProps) => {
   return (
     <div className={styles.container_videoBg}>
       <video autoPlay loop muted>
-        <source src={videoBg} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
       </video>
     </div>
   );
-}
+};
 
 export default VideoBg;

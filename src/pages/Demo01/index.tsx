@@ -2,6 +2,7 @@ import CustomCursor from "../../components/CustomCursor/CoustomCursor";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import VideoBg from "../../components/VideoBg/VideoBg";
+import video from "../../assets/video/25.mp4"
 
 export default function Demo01() {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -10,7 +11,7 @@ export default function Demo01() {
    <div className="stage">
       <Navbar />
       {!isMobile && <CustomCursor />}
-      <VideoBg />
+      <VideoBg videoSrc={video} />
       <h1 className="app_title">
         SpinKicks
       </h1>
