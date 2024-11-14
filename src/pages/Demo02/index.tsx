@@ -1,7 +1,7 @@
-import CustomCursor from "../../components/CustomCursor/CoustomCursor";
-import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import VideoBg from "../../components/VideoBg/VideoBg";
+import CustomCursor2 from "../../components/CustomCursor2/CoustomCursor2";
+import Footer from "../../components/Footer";
 
 import video from "../../assets/video/26.mp4"
 import grainTexture from '../../assets/texture/noise.png';
@@ -12,7 +12,7 @@ export default function Demo02() {
   return(
    <div className="stage">
       <Navbar />
-      {!isMobile && <CustomCursor />}
+      {!isMobile && <CustomCursor2 />}
       <VideoBg videoSrc={video}  grainSrc={grainTexture}/>
       <h1 className="app_title">
         SpinKicks
