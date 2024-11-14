@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import VideoBg from "../../components/VideoBg/VideoBg";
 
-import video from "../../assets/video/00.mp4"
+import video from "../../assets/video/26.mp4"
 import grainTexture from '../../assets/texture/noise.png';
 
 export default function Demo02() {
