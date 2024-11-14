@@ -12,51 +12,56 @@
   left: -100%;
   width: 3rem;
   height: 3rem;
+  background-color: var(--color-dark);
   border-radius: 50%;
-  background: var(--color-dark);
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background 0.1s ease, transform 0.1s ease;
-  transform: translate(-70%, -70%);
   pointer-events: none;
-  z-index: 999;
+  z-index: 9998;
+  transform: translate(-70%, -70%);
+
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background 0.1s ease, transform 0.1s ease;
 }
 
-.cursor::after{
-  content: "";
+.cursorRing {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  transform: translate(-60%, -60%);
   width: 6rem;
   height: 6rem;
+  border: solid var(--color-dark) 1px;
   border-radius: 50%;
-  border: solid  var(--color-dark) 1px;
-  transition: 0.2s;
-  transform: translate(-50%, -50%);
-  z-index: 999;
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
 }
 
-.cursor.active {
+.active {
   width: 0rem;
   height: 0rem;
 }
 
-.cursor.active::after {
+.activeRing {
   border: dotted var(--color-dark) 2px;
   animation: rotate 1s linear infinite;
 }
 
-
-.cursor.active_view {
-  width: 70px;
-  height: 70px;
+.active_view {
+  width: 7rem;
+  height: 7rem;
   background-color: #9CEE69;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  transform: translate(-70%, -70%);
 }
 
-.cursor.active_view::before {
+.active_view::before {
   content: "Veja";
   font-size: 1.4rem;
   font-weight: 600;
+}
+
+.activeRingView {
+  border-color: var(--color-dark);
+  z-index: 9998;
+  transform: translate(-72%, -72%);
 }
