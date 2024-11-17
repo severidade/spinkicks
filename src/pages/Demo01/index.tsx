@@ -45,7 +45,11 @@ export default function Demo01() {
           <Footer />
         </>
       ) : (
-        <div className="loading">Carregando...</div>
+        <div className="loading">
+          <div className="spinner" />
+          <div className="loading-text">Carregando</div>
+          <div className="progress-bar-fancy" />
+        </div>
       )}
     </div>
   );
