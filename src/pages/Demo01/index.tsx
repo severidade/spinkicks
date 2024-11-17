@@ -11,22 +11,18 @@ export default function Demo01() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    setIsPageLoaded(false);
-
-    const videoPromise = new Promise<void>((resolve) => {
-      const videoElement = new HTMLVideoElement();
-      videoElement.src = video;
-      videoElement.onloadeddata = () => resolve();
-    });
-
-    videoPromise.then(() => {
+    const videoElement = document.createElement('video');
+    videoElement.src = video;
+    
+    const handleLoadedData = () => {
       setIsPageLoaded(true);
-    }).catch((error) => {
-      console.error('Erro ao carregar o vídeo:', error);
-      setIsPageLoaded(true);
-    });
+      videoElement.removeEventListener('loadeddata', handleLoadedData);
+    };
+
+    videoElement.addEventListener('loadeddata', handleLoadedData);
 
     return () => {
+      videoElement.removeEventListener('loadeddata', handleLoadedData);
       setIsPageLoaded(false);
     };
   }, []);
