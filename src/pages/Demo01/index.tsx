@@ -17,12 +17,12 @@ export default function Demo01() {
     // alert('Video source set. Waiting for load...');
 
     const handleLoadedData = () => {
-      // setIsPageLoaded(true);
+      setIsPageLoaded(true);
       console.log('Video loaded successfully, simulating delay...');
-      setTimeout(() => {
-        setIsPageLoaded(true);
-        console.log('Page is now loaded.');
-      }, 3000);
+      // setTimeout(() => {
+      //   setIsPageLoaded(true);
+      //   console.log('Page is now loaded.');
+      // }, 3000);
     };
 
     videoElement.addEventListener('loadeddata', handleLoadedData);

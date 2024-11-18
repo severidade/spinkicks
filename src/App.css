@@ -29,6 +29,43 @@
 }
 
 /* Estilos base para o container de loading */
+
+@keyframes grain {
+  0% {
+      transform: translate(20%, -15%)
+  }
+  10% {
+      transform: translate(-20%, -15%)
+  }
+  20% {
+      transform: translate(20%, -5%)
+  }
+  30% {
+      transform: translate(-20%, -5%)
+  }
+  40% {
+      transform: translate(20%, 5%)
+  }
+  50% {
+      transform: translate(-20%, 5%)
+  }
+  60% {
+      transform: translate(20%, 15%)
+  }
+  70% {
+      transform: translate(-20%, 15%)
+  }
+  80% {
+      transform: translate(20%, 5%)
+  }
+  90% {
+      transform: translate(-20%, 5%)
+  }
+  100% {
+      transform: translate(20%, -5%)
+  }
+}
+
 .loading {
   position: fixed;
   inset: 0;
@@ -39,6 +76,37 @@
   /* background-color: black; */
   color: white;
   background-image: radial-gradient(#ffffff00, #1b1e42);
+}
+
+
+.loading::after {
+  animation: grain 6s steps(10) infinite;
+  content: "";
+  width: 300%;
+  height: 300%;
+  background-image: url(./assets/texture/noise.png);
+  background-repeat: repeat;
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  opacity: 0.1;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.loading::before {
+  animation: grain 3s steps(10) infinite;
+  content: "";
+  width: 300%;
+  height: 300%;
+  background-image: url(./assets/texture/noise.png);
+  background-repeat: repeat;
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  opacity: 0.1;
+  transition: opacity 0.4s ease;
+  z-index: 1;
 }
 
 /* Texto de Loading */
