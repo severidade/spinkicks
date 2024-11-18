@@ -114,18 +114,19 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   font-family: "Anton", serif;
-  color: var(--color-hard-gray);
+  color: var(--color-dark);
   text-transform: uppercase;
 }
 
 .spinner {
   width: 5rem;
   height: 5rem;
-  border: 4px solid rgba(75, 75, 75, 0);
+  border: 0.4rem solid rgba(75, 75, 75, 0);
   border-top-color: var(--color-title-primary);
   border-radius: 50%;
   animation: spin 1s infinite linear;
   margin-bottom: 1rem;
+  z-index: 2;
 }
 
 @keyframes spin {
