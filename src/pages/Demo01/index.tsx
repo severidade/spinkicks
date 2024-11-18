@@ -17,7 +17,7 @@ export default function Demo01() {
     // alert('Video source set. Waiting for load...');
 
     const handleLoadedData = () => {
-      // setIsPageLoaded(true);
+      setIsPageLoaded(true);
       console.log('Video loaded successfully, simulating delay...');
       // setTimeout(() => {
       //   setIsPageLoaded(true);
