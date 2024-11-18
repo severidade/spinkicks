@@ -16,7 +16,6 @@ export default function Demo01() {
     
     const handleLoadedData = () => {
       setIsPageLoaded(true);
-      videoElement.removeEventListener('loadeddata', handleLoadedData);
     };
 
     videoElement.addEventListener('loadeddata', handleLoadedData);
