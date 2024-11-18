@@ -14,9 +14,15 @@ export default function Demo01() {
     const videoElement = document.createElement('video');
     videoElement.src = video;
     
+    // alert('Video source set. Waiting for load...');
+
     const handleLoadedData = () => {
-      setIsPageLoaded(true);
-      videoElement.removeEventListener('loadeddata', handleLoadedData);
+      // setIsPageLoaded(true);
+      console.log('Video loaded successfully, simulating delay...');
+      setTimeout(() => {
+        setIsPageLoaded(true);
+        console.log('Page is now loaded.');
+      }, 3000);
     };
 
     videoElement.addEventListener('loadeddata', handleLoadedData);
@@ -48,7 +54,6 @@ export default function Demo01() {
         <div className="loading">
           <div className="spinner" />
           <div className="loading-text">Carregando</div>
-          <div className="progress-bar-fancy" />
         </div>
       )}
     </div>
