@@ -19,10 +19,10 @@ export default function Demo01() {
     const handleLoadedData = () => {
       // setIsPageLoaded(true);
       console.log('Video loaded successfully, simulating delay...');
-      setTimeout(() => {
-        setIsPageLoaded(true);
-        console.log('Page is now loaded.');
-      }, 3000);
+      // setTimeout(() => {
+      //   setIsPageLoaded(true);
+      //   console.log('Page is now loaded.');
+      // }, 3000);
     };
 
     videoElement.addEventListener('loadeddata', handleLoadedData);
