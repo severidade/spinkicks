@@ -1,37 +1,15 @@
-import { useState, useEffect } from 'react';
 import CustomCursor from "../../components/CustomCursor/CoustomCursor";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import VideoBg from "../../components/VideoBg/VideoBg";
 import video from "../../assets/video/25.mp4"
 import grainTexture from '../../assets/texture/dots_01.png';
+import Loading from '../../components/Loading';
+import useLoader from '../../utils/useLoader/index.tsx'
 
 export default function Demo01() {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
-
-  useEffect(() => {
-    const videoElement = document.createElement('video');
-    videoElement.src = video;
-    
-    // alert('Video source set. Waiting for load...');
-
-    const handleLoadedData = () => {
-      setIsPageLoaded(true);
-      // console.log('Video loaded successfully, simulating delay...');
-      // setTimeout(() => {
-      //   setIsPageLoaded(true);
-      //   console.log('Page is now loaded.');
-      // }, 3000);
-    };
-
-    videoElement.addEventListener('loadeddata', handleLoadedData);
-
-    return () => {
-      videoElement.removeEventListener('loadeddata', handleLoadedData);
-      setIsPageLoaded(false);
-    };
-  }, []);
+  const isPageLoaded = useLoader(video)
 
   return (
     <div className="stage">
@@ -51,10 +29,7 @@ export default function Demo01() {
           <Footer />
         </>
       ) : (
-        <div className="loading">
-          <div className="spinner" />
-          <div className="loading-text">Carregando</div>
-        </div>
+        <Loading />
       )}
     </div>
   );
