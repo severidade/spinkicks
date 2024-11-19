@@ -8,7 +8,7 @@ import Loading from '../../components/Loading';
 import useLoader from '../../utils/useLoader/index.tsx'
 
 export default function Demo01() {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 1000;
   const isPageLoaded = useLoader(video)
 
   return (
@@ -21,11 +21,19 @@ export default function Demo01() {
           <h1 className="app_title">
             SpinKicks
           </h1>
-          <ul className="container_gallery">
-            <li className="link_img">01</li>
-            <li className="link_img">02</li>
-            <li className="link_img">03</li>
-          </ul>
+          {isMobile ? (
+            <div className="mobile-warning"> 
+              <h3>😅 Ops, seu celular não vai curtir essa página!</h3>
+              <p>Ela mostra um <strong>recurso de cursor</strong> e funciona somente em um desktop.</p>
+              <p>Vai por mim, acessar por lá vai ser muito mais divertido!</p>
+            </div>
+          ) : (
+            <ul className="container_gallery">
+              <li className="link_img">01</li>
+              <li className="link_img">02</li>
+              <li className="link_img">03</li>
+            </ul>
+          )}
           <Footer />
         </>
       ) : (
