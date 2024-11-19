@@ -23,9 +23,8 @@ export default function Demo01() {
           </h1>
           {isMobile ? (
             <div className="mobile-warning"> 
-              <h3>😅 Ops, seu celular não vai curtir essa página!</h3>
-              <p>Ela mostra um <strong>recurso de cursor</strong> e funciona somente em um desktop.</p>
-              <p>Vai por mim, acessar por lá vai ser muito mais divertido!</p>
+              <h3>Ops, seu celular não vai curtir essa página!</h3>
+              <p>Ela usa um <strong>recurso</strong> que só funciona em desktop. Acessar por lá vai ser muito mais divertido!</p>
             </div>
           ) : (
             <ul className="container_gallery">
