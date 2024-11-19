@@ -27,3 +27,17 @@
   align-items: center;
   font-size: 3rem;
 }
+
+.mobile-warning {
+  background-image: url(../src/assets/texture/black_texture.png);
+  color: var(--color-text-primary);
+  width: 60vw;
+  border-radius: 1rem;
+  padding: 4rem;
+}
+
+.mobile-warning > h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
