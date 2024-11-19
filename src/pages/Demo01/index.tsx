@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import VideoBg from "../../components/VideoBg/VideoBg";
 import video from "../../assets/video/25.mp4"
 import grainTexture from '../../assets/texture/dots_01.png';
+import Loading from '../../components/Loading';
 
 export default function Demo01() {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -17,12 +18,12 @@ export default function Demo01() {
     // alert('Video source set. Waiting for load...');
 
     const handleLoadedData = () => {
-      setIsPageLoaded(true);
+      // setIsPageLoaded(true);
       // console.log('Video loaded successfully, simulating delay...');
-      // setTimeout(() => {
-      //   setIsPageLoaded(true);
-      //   console.log('Page is now loaded.');
-      // }, 3000);
+      setTimeout(() => {
+        setIsPageLoaded(true);
+        console.log('Page is now loaded.');
+      }, 3000);
     };
 
     videoElement.addEventListener('loadeddata', handleLoadedData);
@@ -51,10 +52,7 @@ export default function Demo01() {
           <Footer />
         </>
       ) : (
-        <div className="loading">
-          <div className="spinner" />
-          <div className="loading-text">Carregando</div>
-        </div>
+        <Loading />
       )}
     </div>
   );
