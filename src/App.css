@@ -18,7 +18,7 @@
 }
 
 .container_gallery > li {
-  width: 200px;
+  width: 200px;    line-height: 1.4;
   height: 200px;
   font-family: "Anton", serif;
   background-color: var(--color-title-primary);
@@ -57,10 +57,8 @@
 
 .mobile-warning > h3 {
   font-weight: 600;
-  font-size: 1.4rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  line-height: 1.4;
   padding-left: 4rem;
   position: relative;
   

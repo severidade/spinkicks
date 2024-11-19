@@ -10,6 +10,7 @@ import useLoader from '../../utils/useLoader/index.tsx'
 export default function Demo01() {
   // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 1000;
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  
   const isPageLoaded = useLoader(video)
 
   return (
