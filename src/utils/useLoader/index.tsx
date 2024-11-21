@@ -11,7 +11,10 @@ export default function useLoader(videoSrc: string) : boolean{
 
   useEffect(() => {
     const videoElement = document.createElement('video');
+    videoElement.preload = 'auto';
     videoElement.src = videoSrc;
+
+    videoElement.load();
 
     const handleLoadedData = () => {
       setIsPageLoaded(true);
@@ -25,6 +28,8 @@ export default function useLoader(videoSrc: string) : boolean{
 
     return () => {
       videoElement.removeEventListener('loadeddata', handleLoadedData);
+      videoElement.pause();
+      videoElement.src = '';
       setIsPageLoaded(false);
     };
   }, [videoSrc]);
