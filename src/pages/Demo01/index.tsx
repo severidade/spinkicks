@@ -5,13 +5,13 @@ import VideoBg from "../../components/VideoBg/VideoBg";
 import video from "../../assets/video/25.webm"
 import grainTexture from '../../assets/texture/dots_01.png';
 import Loading from '../../components/Loading';
-import useLoader from '../../utils/useLoader/index.tsx'
+import useLoader2 from '../../utils/useLoader2/index.tsx'
 
 export default function Demo01() {
   // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth < 1000;
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
   
-  const isPageLoaded = useLoader(video)
+  const isPageLoaded = useLoader2(video, grainTexture)
 
   return (
     <div className="stage">
