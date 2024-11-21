@@ -3,7 +3,7 @@ import VideoBg from "../../components/VideoBg/VideoBg";
 import CustomCursor2 from "../../components/CustomCursor2/CoustomCursor2";
 import Footer from "../../components/Footer";
 
-import video from "../../assets/video/26.mp4"
+import video from "../../assets/video/26.webm"
 import grainTexture from '../../assets/texture/noise.png';
 
 export default function Demo02() {
