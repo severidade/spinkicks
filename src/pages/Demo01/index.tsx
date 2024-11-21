@@ -2,7 +2,7 @@ import CustomCursor from "../../components/CustomCursor/CoustomCursor";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import VideoBg from "../../components/VideoBg/VideoBg";
-import video from "../../assets/video/25.mp4"
+import video from "../../assets/video/25.webm"
 import grainTexture from '../../assets/texture/dots_01.png';
 import Loading from '../../components/Loading';
 import useLoader from '../../utils/useLoader/index.tsx'
