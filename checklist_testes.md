@@ -58,7 +58,7 @@
     //   "build": "vite build",
     //   "preview": "vite preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage:html": "vitest run --coverage --reporter=html"
     },
 
     // ...
