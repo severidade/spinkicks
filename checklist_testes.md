@@ -1,5 +1,4 @@
 # 📝 Configurando RTL com o Vitest
-  
 
 
 - [X] Passo 1 - Instale as bibliotecas necessárias;
@@ -25,12 +24,11 @@
 - [X] Passo 4 - No arquivo ``vite.config.ts``, adicione uma nova chave ao objeto que está sendo exportado:
 
     ```bash
-    // vite.config.ts
+    import { defineConfig } from 'vite'
+    import react from '@vitejs/plugin-react-swc'
 
-    // ...
-
-    // export default defineConfig({
-    //   plugins: [react()],
+    export default defineConfig({
+      plugins: [react()],
       test: {
         globals: true,
         environment: 'jsdom',
@@ -38,11 +36,12 @@
         css: true,
         reporters: ['verbose'],
         coverage: {
-          reporter: ['text', 'json', 'html'],
-          provider: 'v8'
+          provider: 'v8',
+          reporter: ['text', 'json', 'html', 'lcov'],
+          reportsDirectory: './coverage'
         }
       },
-    // })
+    })
     ```
 
 
