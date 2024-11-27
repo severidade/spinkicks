@@ -1,0 +1,56 @@
+name: Run Tests and Generate Reports
+on:
+  push:
+    branches:
+      - main
+      - tests
+  pull_request:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Run Tests with Coverage
+      run: npm run coverage
+    
+    - name: Upload Test Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-reports
+        path: |
+          coverage/
+          test-results/
+        retention-days: 7
+    
+    - name: Generate Test Summary
+      run: |
+        mkdir -p test-results
+        echo "## Test and Coverage Report" > test-results/summary.md
+        echo "\`\`\`" >> test-results/summary.md
+        npx vitest run --coverage >> test-results/summary.md
+        echo "\`\`\`" >> test-results/summary.md
+    
+    - name: Upload Test Summary
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-summary
+        path: test-results/
+        retention-days: 7
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage/coverage-final.json
