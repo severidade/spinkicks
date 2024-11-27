@@ -10,8 +10,9 @@ export default defineConfig({
     css: true,
     reporters: ['verbose'],
     coverage: {
-      reporter: ['text', 'json', 'html'],
-      provider: 'v8'
+      provider: 'v8',
+      reporter: ['text', 'json', 'html', 'lcov'],
+      reportsDirectory: './coverage'
     }
   },
 })
