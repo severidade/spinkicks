@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "coverage:html": "vitest run --coverage --reporter=html"
+    "test:ci": "vitest run --coverage --reporter=json"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",

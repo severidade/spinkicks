@@ -8,7 +8,10 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './setupTests.ts',
     css: true,
-    reporters: ['verbose'],
+    reporters: ['verbose', 'json'],
+    outputFile: {
+      json: './test-results/test-results.json'
+    },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html', 'lcov'],
