@@ -84,3 +84,10 @@ Excelente! Sua aplicação agora está configurada para usar o RTL com Vitest! P
 
     // ...
     ```
+
+
+## 💡 Ferramentas
+
+- Todos os seletores ``queries`` estão disponíveis [nessa lista](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/095ebb0d-1932-4d37-933b-9e1d721646fb/section/a0efa7dc-2028-4f04-9675-23045a4b67f2/day/64db167a-61de-4b3b-bdc7-a2576326656b/lesson/234a11a8-158d-40e7-9361-5935f3525b31) da ``react-testing-library``.
+
+- Aqui está a lista completa das funções de asserção disponíveis no ``@testing-library/jest-dom``, com uma breve descrição de cada uma delas. Essas funções são extensões úteis ao ``expect`` para realizar asserções em testes de DOM. 
