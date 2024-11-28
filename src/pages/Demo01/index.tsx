@@ -1,4 +1,4 @@
-import CustomCursor from "../../components/CustomCursor/CoustomCursor";
+import CustomCursor from "../../components/CustomCursor/CustomCursor.tsx";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import VideoBg from "../../components/VideoBg/VideoBg";

@@ -69,7 +69,11 @@ function CustomCursor() {
 
   return (
     <div>
-      <div ref={cursorRef} className={styles.cursor} />
+      <div 
+        ref={cursorRef} 
+        className={styles.cursor}
+        data-testid="custom-cursor"
+      />
     </div>
   );
 }

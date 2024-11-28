@@ -34,7 +34,7 @@
   z-index: 999;
 }
 
-.cursor.active {
+.active {
   width: 0rem;
   height: 0rem;
 }
@@ -45,7 +45,7 @@
 }
 
 
-.cursor.active_view {
+.active_view {
   width: 70px;
   height: 70px;
   background-color: #9CEE69;
@@ -55,7 +55,7 @@
   text-transform: uppercase;
 }
 
-.cursor.active_view::before {
+.active_view::before {
   content: "Veja";
   font-size: 1.4rem;
   font-weight: 600;

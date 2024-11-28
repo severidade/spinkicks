@@ -24,4 +24,10 @@ dist-ssr
 *.sw?
 .env
 
-/coverage
+# Resultados de testes
+test-results/
+test-results.json
+
+# Cobertura de testes
+coverage/
+*.lcov
