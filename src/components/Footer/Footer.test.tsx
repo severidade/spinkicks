@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import Footer from './index';
 
-describe('Component Footer', () => {
+describe('👢 - Component Footer', () => {
   it('o texto "Tecnologias" deve ser exibido na tela', () => {
     render(<Footer />);
     const text = screen.getByText(/Tecnologias/i);
